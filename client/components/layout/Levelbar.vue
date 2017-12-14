@@ -7,30 +7,15 @@
         </h3>
       </div>
       <div class="level-item" v-if="!!codelink">
-        <tooltip label="View code" placement="right" size="small" :rounded="true">
-          <span class="icon">
-            <a  :href="codelink">
-              <i class="fa fa-github"></i>
-            </a>
-          </span>
-        </tooltip>
       </div>
-    </div>
-
-    <div class="level-right is-hidden-mobile">
-      <breadcrumb :list="list"></breadcrumb>
     </div>
   </nav>
 </template>
 
 <script>
-import Breadcrumb from 'vue-bulma-breadcrumb'
-import Tooltip from 'vue-bulma-tooltip'
 
 export default {
   components: {
-    Breadcrumb,
-    Tooltip
   },
 
   data () {

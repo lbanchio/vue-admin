@@ -19,28 +19,17 @@
             <i class="fa fa-angle-down"></i>
           </span>
         </a>
-
-        <expanding v-if="item.children && item.children.length">
-          <ul v-show="isExpanded(item)">
-            <li v-for="subItem in item.children" v-if="subItem.path">
-              <router-link :to="generatePath(item, subItem)">
-                {{ subItem.meta && subItem.meta.label || subItem.name }}
-              </router-link>
-            </li>
-          </ul>
-        </expanding>
       </li>
     </ul>
   </aside>
 </template>
 
 <script>
-import Expanding from 'vue-bulma-expanding'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
   components: {
-    Expanding
+
   },
 
   props: {
@@ -133,7 +122,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~bulma/sass/utilities/variables';
+@import '~bulma/sass/utilities/initial-variables';
 @import '~bulma/sass/utilities/mixins';
 
 .app-sidebar {
